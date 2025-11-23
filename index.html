@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- TODO: Paste GTM HEAD snippet here later -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelWave iPhone Studio | Latest iPhones & Accessories</title>
+  <style>
+    :root {
+      --bg: #05060b;
+      --bg-soft: #0c0f1a;
+      --card: #101322;
+      --accent: #3b82f6;
+      --accent-soft: #60a5fa;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 50%, #000000 100%);
+      color: var(--text);
+    }
+
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(148,163,184,0.25);
+      backdrop-filter: blur(12px);
+      background: rgba(15,23,42,0.85);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .logo span {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      border-color: rgba(148,163,184,0.6);
+      background: rgba(15,23,42,0.8);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 3.2rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent-soft);
+      margin-bottom: 0.8rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1.15;
+      margin: 0 0 0.7rem;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 460px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #22c55e);
+      color: #0b1020;
+      box-shadow: 0 10px 30px rgba(59,130,246,0.6);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 36px rgba(59,130,246,0.75);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(148,163,184,0.6);
+      color: var(--muted);
+    }
+
+    .btn-outline:hover {
+      background: rgba(15,23,42,0.9);
+      color: var(--text);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #1d253a 0, #020617 70%);
+      border-radius: 24px;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid rgba(148,163,184,0.45);
+      box-shadow: 0 16px 40px rgba(15,23,42,0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-phone {
+      height: 210px;
+      width: 110px;
+      border-radius: 36px;
+      margin: 0 auto 1rem;
+      border: 2px solid rgba(148,163,184,0.8);
+      background: linear-gradient(160deg, #020617, #0f172a, #1e293b);
+      position: relative;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.8);
+    }
+
+    .hero-phone-screen {
+      position: absolute;
+      inset: 14px;
+      border-radius: 26px;
+      background: radial-gradient(circle at top, #38bdf8, #1e293b 55%, #020617 100%);
+    }
+
+    .hero-chip {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1.2rem;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.7);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section {
+      margin-top: 3.2rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .section p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 620px;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .feature-card {
+      background: rgba(15,23,42,0.9);
+      border-radius: 16px;
+      padding: 1.1rem 1rem;
+      border: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      background: #020617;
+      color: var(--muted);
+      text-align: center;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 840px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TODO: Paste GTM BODY snippet (noscript) here later -->
+
+  <header>
+    <div class="logo">
+      PIXELWAVE
+      <span>IPHONE STUDIO</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="payments.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Latest iPhones • Genuine accessories</div>
+        <h1>Upgrade to the latest iPhone with studio-grade accessories.</h1>
+        <p class="hero-sub">
+          Explore the newest iPhone lineup, MagSafe chargers, clear cases, Type-C
+          cables and more—curated to match the latest Apple ecosystem.
+        </p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" onclick="location.href='products.html'">
+            View Products
+          </button>
+          <button class="btn btn-outline" onclick="location.href='payments.html'">
+            Quick Checkout (Demo)
+          </button>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-tag">iPhone 16 Pro (Demo)</div>
+        <div class="hero-phone">
+          <div class="hero-phone-screen"></div>
+        </div>
+        <p class="hero-chip">
+          Demo store: no real payments, perfect for practicing GA4, GTM, and cross-domain tracking flows.
+        </p>
+      </aside>
+    </section>
+
+    <section class="section">
+      <h2>Why shop at PixelWave?</h2>
+      <p>
+        This mini storefront is built for practice: we keep the layout clean,
+        the copy simple, and the journey clear—from landing, to products, to
+        checkout and confirmation.
+      </p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-title">Latest iPhone models</div>
+          <div>Showcase the newest generation iPhones with clean specs and pricing.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Official-style accessories</div>
+          <div>MagSafe-style chargers, clear cases, cables, and earbuds to complete the setup.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-title">Tracking-friendly flow</div>
+          <div>Perfect structure for GA4 pageviews, events, conversions, and cross-domain testing.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> PixelWave iPhone Studio · Demo project (no real orders).
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
